@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         
         // to use this methos enanle backgroundmodes for ur app
         // add Privacy - Health Share Usage Description in ur plist file
+
         // user can set this logic in appdelegate also
 
         
@@ -64,15 +65,18 @@ class ViewController: UIViewController {
     
     func observerForHK(type:HKQuantityTypeIdentifier){
         
+        
+        //IMPORTANT:Notes
+        
+        // to use this methos enanle backgroundmodes for ur app
+        // add Privacy - Health Share Usage Description in ur plist file
+        // this method called when app become active 
+        
         guard let quantityType = HKObjectType.quantityType(forIdentifier: type) else {
             print("Unable to create quantity type")
             return
         }
         
-         //IMPORTANT:Notes
-        
-         // to use this methos enanle backgroundmodes for ur app
-         // add Privacy - Health Share Usage Description in ur plist file
         
         
         // request authorization and save a sample of the type of healthkit data required
